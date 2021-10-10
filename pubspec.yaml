@@ -1,7 +1,7 @@
 name: tp_package
 description: tp package
 version: 0.0.1
-homepage:
+homepage: https://github.com/thienphan1996/flutter_tp_package
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
