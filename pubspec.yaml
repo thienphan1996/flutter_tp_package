@@ -1,0 +1,35 @@
+name: tp_package
+description: tp package
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  intl: ^0.17.0
+
+  fluttertoast: ^8.0.8
+
+  url_launcher: ^6.0.10
+
+  flutter_native_splash: ^1.2.3
+
+  flutter_launcher_icons: ^0.9.2
+
+  flutter_share: ^2.0.0
+
+  google_mobile_ads: ^0.13.4
+
+  connectivity_plus: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+
+flutter:
