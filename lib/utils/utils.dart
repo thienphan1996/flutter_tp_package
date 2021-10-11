@@ -5,7 +5,7 @@ import 'package:intl/intl.dart';
 import 'package:tp_package/dialog/alert_dialog.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class Utils {
+class TpUtils {
   static const String kDateFormat = 'yyyy/MM/dd hh:mm';
 
   static String toVnd(int value, {bool emptyToZero = true}) {

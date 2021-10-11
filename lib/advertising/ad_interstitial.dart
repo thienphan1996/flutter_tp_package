@@ -1,15 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
-class TpInterstitialAd {
-  static InterstitialAd? _interstitialAd;
-  static bool _isLoading = false;
-
+class TpAdManager {
   static Future<InitializationStatus> init(List<String> testDevices) async {
     MobileAds.instance.updateRequestConfiguration(
         RequestConfiguration(testDeviceIds: testDevices));
     return MobileAds.instance.initialize();
   }
+}
+
+class TpInterstitialAd {
+  static InterstitialAd? _interstitialAd;
+  static bool _isLoading = false;
 
   static void load(String unitId, {required VoidCallback onLoadFailed}) {
     if (!_isLoading && _interstitialAd == null) {

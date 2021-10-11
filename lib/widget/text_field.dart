@@ -2,8 +2,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class CommonTextField extends StatefulWidget {
-  const CommonTextField(this.labelText,
+const TextStyle _kTextStyle = TextStyle(
+  color: Colors.black,
+  fontSize: 18.0,
+);
+
+const TextStyle _kLabelTextStyle = TextStyle(
+  color: Colors.black54,
+  fontSize: 16.0,
+);
+
+class TpTextField extends StatefulWidget {
+  const TpTextField(this.labelText,
       {required this.onChanged,
         this.maxLength,
         this.textInputType,
@@ -13,6 +23,8 @@ class CommonTextField extends StatefulWidget {
         this.color = Colors.blue,
         this.onFocus,
         this.autoFocus,
+        this.textStyle = _kTextStyle,
+        this.labelStyle = _kLabelTextStyle,
         Key? key})
       : super(key: key);
 
@@ -26,12 +38,14 @@ class CommonTextField extends StatefulWidget {
   final Color color;
   final VoidCallback? onFocus;
   final bool? autoFocus;
+  final TextStyle textStyle;
+  final TextStyle labelStyle;
 
   @override
-  _CommonTextFieldState createState() => _CommonTextFieldState();
+  _TpTextFieldState createState() => _TpTextFieldState();
 }
 
-class _CommonTextFieldState extends State<CommonTextField> {
+class _TpTextFieldState extends State<TpTextField> {
   bool _visibleSuffix = false;
 
   TextEditingController? _editingController = TextEditingController();
@@ -85,18 +99,12 @@ class _CommonTextFieldState extends State<CommonTextField> {
               controller: _editingController,
               maxLength: widget.maxLength,
               focusNode: _focus,
-              style: const TextStyle(
-                color: Colors.black,
-                fontSize: 16.0,
-              ),
+              style: widget.textStyle,
               keyboardType: widget.textInputType,
               inputFormatters: widget.inputFormatter,
               decoration: InputDecoration(
                 labelText: widget.labelText,
-                labelStyle: const TextStyle(
-                  color: Colors.black45,
-                  fontSize: 14.0,
-                ),
+                labelStyle: widget.labelStyle,
                 border: InputBorder.none,
                 contentPadding: const EdgeInsets.fromLTRB(10.0, 5.0, 5.0, 10.0),
                 counterText: '',
