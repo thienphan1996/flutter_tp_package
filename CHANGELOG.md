@@ -9,3 +9,8 @@
 ## 1.0.1
 
 * Update Tp Material app
+
+## 1.0.2
+
+* Update Tp Toast
+* Remove splash screen, icon package

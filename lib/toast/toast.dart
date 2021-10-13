@@ -8,8 +8,8 @@ class TpToast {
       toastLength: Toast.LENGTH_SHORT,
       gravity: ToastGravity.BOTTOM,
       timeInSecForIosWeb: 1,
-      backgroundColor: Colors.greenAccent,
-      textColor: Colors.black,
+      backgroundColor: const Color(0xFF00c49a),
+      textColor: const Color(0xFFe6fafa),
       fontSize: 16.0,
     );
   }
@@ -20,8 +20,8 @@ class TpToast {
       toastLength: Toast.LENGTH_SHORT,
       gravity: ToastGravity.BOTTOM,
       timeInSecForIosWeb: 1,
-      backgroundColor: Colors.orangeAccent,
-      textColor: Colors.black,
+      backgroundColor: const Color(0xFFfff8ec),
+      textColor: const Color(0xFFdd6031),
       fontSize: 16.0,
     );
   }
@@ -32,8 +32,20 @@ class TpToast {
       toastLength: Toast.LENGTH_SHORT,
       gravity: ToastGravity.BOTTOM,
       timeInSecForIosWeb: 1,
-      backgroundColor: Colors.redAccent,
-      textColor: Colors.black,
+      backgroundColor: const Color(0xFFfff2f4),
+      textColor: const Color(0xFFd81159),
+      fontSize: 16.0,
+    );
+  }
+
+  static void failed(String message) {
+    Fluttertoast.showToast(
+      msg: message,
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.BOTTOM,
+      timeInSecForIosWeb: 1,
+      backgroundColor: const Color(0xFFfff2f4),
+      textColor: const Color(0xFFd81159),
       fontSize: 16.0,
     );
   }
