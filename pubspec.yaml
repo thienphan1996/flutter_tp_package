@@ -1,6 +1,6 @@
 name: tp_package
 description: tp package
-version: 1.0.2
+version: 1.0.3
 homepage: https://github.com/thienphan1996/flutter_tp_package
 
 environment:

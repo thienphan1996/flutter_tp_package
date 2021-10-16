@@ -14,3 +14,8 @@
 
 * Update Tp Toast
 * Remove splash screen, icon package
+
+## 1.0.3
+
+* Update Tp Toast Colors
+* Add share function

@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_share/flutter_share.dart';
 import 'package:intl/intl.dart';
 import 'package:tp_package/dialog/alert_dialog.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -96,6 +97,24 @@ class TpUtils {
     }
 
     return value;
+  }
+
+  static void shareFile(String title, String filePath) {
+    FlutterShare.shareFile(title: title, filePath: filePath);
+  }
+
+  static void share(
+    String title, {
+    String? text,
+    String? linkUrl,
+    String? chooserTitle,
+  }) {
+    FlutterShare.share(
+      title: title,
+      text: text,
+      linkUrl: linkUrl,
+      chooserTitle: chooserTitle,
+    );
   }
 
   static double roundDouble(double val, int places) {

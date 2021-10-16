@@ -8,8 +8,8 @@ class TpToast {
       toastLength: Toast.LENGTH_SHORT,
       gravity: ToastGravity.BOTTOM,
       timeInSecForIosWeb: 1,
-      backgroundColor: const Color(0xFF00c49a),
-      textColor: const Color(0xFFe6fafa),
+      backgroundColor: const Color(0xFFe6fafa),
+      textColor: Colors.black,
       fontSize: 16.0,
     );
   }
@@ -21,7 +21,7 @@ class TpToast {
       gravity: ToastGravity.BOTTOM,
       timeInSecForIosWeb: 1,
       backgroundColor: const Color(0xFFfff8ec),
-      textColor: const Color(0xFFdd6031),
+      textColor: Colors.black,
       fontSize: 16.0,
     );
   }
@@ -33,7 +33,7 @@ class TpToast {
       gravity: ToastGravity.BOTTOM,
       timeInSecForIosWeb: 1,
       backgroundColor: const Color(0xFFfff2f4),
-      textColor: const Color(0xFFd81159),
+      textColor: Colors.black,
       fontSize: 16.0,
     );
   }
@@ -45,7 +45,7 @@ class TpToast {
       gravity: ToastGravity.BOTTOM,
       timeInSecForIosWeb: 1,
       backgroundColor: const Color(0xFFfff2f4),
-      textColor: const Color(0xFFd81159),
+      textColor: Colors.black,
       fontSize: 16.0,
     );
   }
