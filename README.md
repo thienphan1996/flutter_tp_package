@@ -1,11 +1,10 @@
 <p align="center"><img src="https://play-lh.googleusercontent.com/EMJV8qRIQEaTEOEAdhreMmjyP2qmE5yX4KzxKfkutJdkzHrLb5aUTKl_IAO6KURcZxd0=w4494-h2528-rw" alt="TP MEDIA"></p>
 <p align="center">
-  <a href="https://pub.dev/packages/convex_bottom_bar"><img src="https://img.shields.io/pub/v/convex_bottom_bar.svg" alt="pub.dev"></a>
-  <a href="https://pub.dev/packages/convex_bottom_bar/versions/3.0.0-nullsafety.0"><img src="https://img.shields.io/badge/nullsafety-3.0.0-blue.svg" alt="pub.dev"></a>
-  <a href="https://github.com/hacktons/convex_bottom_bar"><img src="https://img.shields.io/badge/platform-flutter-ff69b4.svg" alt="github"></a>
-  <a href="https://pub.dev/packages/convex_bottom_bar/score"><img src="https://badges.bar/convex_bottom_bar/likes" alt="likes"></a>
+  <a href="https://pub.dev/packages/tp_package"><img src="https://img.shields.io/pub/v/tp_package.svg" alt="pub.dev"></a>
+  <a href="https://github.com/thienphan1996/flutter_tp_package"><img src="https://img.shields.io/badge/platform-flutter-ff69b4.svg" alt="github"></a>
 </p>
-## TP package:
+
+## Features
 - Load banner ad faster.
 - Optimize load interstitial ad singleton.
 - Make utils toast, connectivity, alert dialog, text field, tile row.
