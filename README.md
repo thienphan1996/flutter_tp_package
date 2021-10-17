@@ -10,11 +10,6 @@
 - Make utils toast, connectivity, alert dialog, text field, tile row.
 - Make flutter share, send mail, compose call in a single package.
 
-## Features
-
-- Implement admob advertising faster
-- Make some common packages in a single package
-
 ## Getting started
 
 ```yaml
