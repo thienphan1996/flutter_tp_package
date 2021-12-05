@@ -37,3 +37,9 @@
 ## 1.0.7
 
 * Update name
+
+## 1.0.8
+
+* Update TpUtils, add function getStorageDirectory
+* Remove file permission_handler
+* Update README.md

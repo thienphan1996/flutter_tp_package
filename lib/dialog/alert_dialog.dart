@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class TpAlertDialog extends StatelessWidget {
-  const TpAlertDialog(
-      {required this.title,
-      required this.message,
-      required this.cancelText,
-      required this.onOkButton,
-      this.color = Colors.blue,
-      Key? key})
-      : super(key: key);
+  const TpAlertDialog({
+    required this.title,
+    required this.message,
+    required this.cancelText,
+    required this.onOkButton,
+    this.color = Colors.blue,
+    Key? key,
+  }) : super(key: key);
 
   final String title;
   final String message;

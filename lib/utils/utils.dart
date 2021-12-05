@@ -1,8 +1,11 @@
+import 'dart:io';
 import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_share/flutter_share.dart';
 import 'package:intl/intl.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:tp_package/dialog/alert_dialog.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -121,4 +124,57 @@ class TpUtils {
     num mod = pow(10.0, places);
     return ((val * mod).round().toDouble() / mod);
   }
+
+  static Future<PermissionStatus> _requestStoragePermission(
+    BuildContext context,
+  ) async {
+    if (Platform.isAndroid) {
+      PermissionStatus status = await Permission.storage.status;
+
+      if (!status.isGranted) {
+        status = await Permission.storage.request();
+      }
+
+      return status;
+    }
+
+    return Future.value(PermissionStatus.granted);
+  }
+
+  /// Get external storage with request permission in Android
+  /// Add key to Info.plist & WRITE_EXTERNAL_STORAGE to manifest.xml
+  // iOS:
+  // Add the following keys to your Info.plist file, located in <project root>/ios/Runner/Info.plist:
+  // NSPhotoLibraryUsageDescription - describe why your app needs permission for the photo library.
+  // This is called Privacy - Photo Library Usage Description in the visual editor.
+  //
+  // Android:
+  // android.permission.WRITE_EXTERNAL_STORAGE - Permission for usage of external storage
+  static Future<StorageStatus> getStorageDirectory(BuildContext context) async {
+    Directory? directory;
+
+    if (Platform.isAndroid) {
+      PermissionStatus result = await _requestStoragePermission(context);
+
+      if (result == PermissionStatus.granted) {
+        directory = await getExternalStorageDirectory();
+      }
+
+      return Future.value(StorageStatus(directory, result));
+    } else {
+      directory = await getApplicationDocumentsDirectory();
+
+      return Future.value(StorageStatus(directory, PermissionStatus.granted));
+    }
+  }
+}
+
+class StorageStatus {
+  StorageStatus(
+    this.directory,
+    this.permissionStatus,
+  );
+
+  final PermissionStatus permissionStatus;
+  final Directory? directory;
 }
