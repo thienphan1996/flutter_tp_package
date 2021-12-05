@@ -53,7 +53,7 @@ TpInterstitialAd.dispose();
 Request permission:
 
 ```dart
-Future<PermissionResult> TpTpPermission.request(yourPermission);
+Future<PermissionResult> TpPermission.request(yourPermission);
 ```
 
 Get External storage:
@@ -68,7 +68,7 @@ Add the following keys to your _Info.plist_ file, located in `<project root>/ios
 * `android.permission.WRITE_EXTERNAL_STORAGE` - Permission for usage of external storage
 
 ```dart
-Future<StorageStatus> TpTpPermission.getStorageDirectory(context);
+Future<StorageStatus> TpPermission.getStorageDirectory(context);
 ```
 
 Init material app with responsive for tablet, pc:

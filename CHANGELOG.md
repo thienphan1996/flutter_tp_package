@@ -33,3 +33,7 @@
 * Add file permission_handler.dart with functions:
 * request permission
 * getStorageDirectory
+
+## 1.0.7
+
+* Update name
