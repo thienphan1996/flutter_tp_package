@@ -27,3 +27,9 @@
 ## 1.0.5
 
 * Update README.md
+
+## 1.0.6
+
+* Add file permission_handler.dart with functions:
+* request permission
+* getStorageDirectory

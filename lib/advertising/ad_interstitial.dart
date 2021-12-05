@@ -13,7 +13,7 @@ class TpInterstitialAd {
   static InterstitialAd? _interstitialAd;
   static bool _isLoading = false;
 
-  static void load(String unitId, {required VoidCallback onLoadFailed}) {
+  static void load(String unitId) {
     if (!_isLoading && _interstitialAd == null) {
       _isLoading = true;
       InterstitialAd.load(
@@ -25,7 +25,6 @@ class TpInterstitialAd {
             _isLoading = false;
           },
           onAdFailedToLoad: (LoadAdError error) {
-            onLoadFailed.call();
             _isLoading = false;
           },
         ),

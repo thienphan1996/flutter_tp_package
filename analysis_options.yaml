@@ -15,10 +15,10 @@ linter:
     public_member_api_docs: false
 
     # Blindly follow the Flutter code style, which prefers types everywhere
-    always_specify_types: true
+    always_specify_types: false
 
     # Back to the 80s
-    lines_longer_than_80_chars: true
+    lines_longer_than_80_chars: false
 
     # Use parameter order as in json response
     always_put_required_named_parameters_first: false

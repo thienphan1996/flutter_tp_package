@@ -35,7 +35,7 @@ TpBannerAd('banner ad unit id')
 Load interstitial ad:
 
 ```dart
-TpInterstitialAd.load('interstitial ad unit id', onLoadFailed: yourFunction);
+TpInterstitialAd.load('interstitial ad unit id');
 ```
 
 Show interstitial ad:
@@ -48,6 +48,27 @@ Dispose interstitial ad:
 
 ```dart
 TpInterstitialAd.dispose();
+```
+
+Request permission:
+
+```dart
+Future<PermissionResult> TpTpPermission.request(yourPermission);
+```
+
+Get External storage:
+### iOS
+
+Add the following keys to your _Info.plist_ file, located in `<project root>/ios/Runner/Info.plist`:
+
+* `NSPhotoLibraryUsageDescription` - describe why your app needs permission for the photo library. This is called _Privacy - Photo Library Usage Description_ in the visual editor.
+
+### Android
+
+* `android.permission.WRITE_EXTERNAL_STORAGE` - Permission for usage of external storage
+
+```dart
+Future<StorageStatus> TpTpPermission.getStorageDirectory(context);
 ```
 
 Init material app with responsive for tablet, pc:
