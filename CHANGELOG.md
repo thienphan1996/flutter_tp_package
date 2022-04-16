@@ -43,3 +43,11 @@
 * Update TpUtils, add function getStorageDirectory
 * Remove file permission_handler
 * Update README.md
+
+## 1.0.9
+
+* Migrate permission_handler
+
+## 1.0.10
+
+* Migrate path_provider
